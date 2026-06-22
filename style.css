@@ -1,0 +1,367 @@
+/* --- THE MAIN HEADER CONTAINER --- */
+.header {
+    background-color: #000f32; /* The deep dark blue color from your photo */
+    color: #ffffff;            /* Changes all header text colors to white */
+    
+    /* 1. The Layout Engine */
+    display: flex;
+    justify-content: space-between; /* Pushes the logo to the left, nav menu to the right */
+    align-items: center;     /* Centers everything vertically inside the bar */
+    
+    /* 2. Spacing and Sizing */
+    padding: 15px 40px;      /* 15px top/bottom breathing room, 40px padding from the screen walls */
+    width: 100%;             /* Stretches the bar across the entire screen width */
+    box-sizing: border-box;
+}
+
+/* --- THE LOGO --- */
+.header h1 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: -0.5px;
+}
+
+/* --- THE NAV LIST WRAPPER --- */
+.header nav ul {
+    list-style: none;        /* Removes default bullet points from the list */
+    display: flex;           /* Sits the list items side-by-side horizontally */
+    gap: 20px;               /* Explicit spacing between each text link */
+}
+
+/* --- THE NAV LINK TEXT --- */
+.header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;   /* Removes the default underline from links */
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+    opacity: 0.9;            /* Slightly softens the white links */
+    transition: opacity 0.2s;/* Smoothly fades color on mouse hover */
+}
+
+/* Highlight link on hover */
+.header nav ul li a:hover {
+    opacity: 1;              /* Makes text crisp white when hovering over it */
+}
+/* --- THE MAIN LAYOUT ROW ENGINE --- */
+.hero-row-wrapper {
+    display: flex;         
+    gap: 15px;             
+    max-width: 1200px;     
+    margin: 20px auto;     
+    padding: 0 20px;
+}
+
+/* --- LEFT SIDE --- */
+.Desert-container {
+    position: relative;
+    flex: 6;               /* Takes up 60% of the row width */
+}
+.Desert-image {
+    width: 100%;
+    height: 435px;         /* Match total height of right column layers */
+    object-fit: cover;
+    display: block;
+}
+.Desert-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* --- RIGHT SIDE COLUMN ENGINE --- */
+.right-column {
+    flex: 4;               /* Takes up 40% of the row width */
+    display: flex;
+    flex-direction: column;/* Stacks components vertically: Netflix on top, Split row on bottom */
+    gap: 15px;             /* Vertical gap spacing between rows */
+}
+
+/* --- TOP RIGHT: NETFLIX CARD --- */
+.Netflix-container {
+    position: relative;   
+    height: 210px;         /* Fixed height for Netflix card */
+}
+.Netflix-image {
+    width: 100%;          
+    height: 100%;         
+    object-fit: cover;    
+    display: block;
+}
+.Netflix-text {
+    position: absolute;
+    bottom: 0;            
+    left: 0;
+    width: 100%;
+    padding: 20px;        
+    box-sizing: border-box;
+}
+.Netflix-text h2 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;       
+    font-weight: bold;
+}
+
+/* --- BOTTOM RIGHT: INSTA & COMPANION ROW SPLIT --- */
+.sub-row-wrapper {
+    display: flex;         /* Sits Insta and Companion card side-by-side */
+    gap: 15px;             /* Horizontal gap space between them */
+    height: 210px;         /* Height of the bottom split block row */
+}
+
+.sub-card {
+    position: relative;
+    flex: 1;               /* Equal 50/50 division layout allocation */
+}
+
+.sub-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sub-card-text {
+    position: absolute;
+    bottom: 0;            /* Forces text overlay to drop to the bottom of small cards */
+    left: 0;
+    width: 100%;
+    padding: 15px;        /* Snug padding configuration for small text cards */
+    box-sizing: border-box;
+}
+
+.sub-card-text h2 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;       /* Smaller scaling text variant for tiny sub-sections */
+    font-weight: bold;
+    margin: 0;
+}
+/* --- SERVICES ROW LAYOUT --- */
+.services-row {
+    display: flex;
+    gap: 20px;             /* Space between the three paragraph boxes */
+    max-width: 1200px;     /* Matches your page container lines */
+    margin: 35px auto;     /* Pushes space above and below this section */
+    padding: 0 20px;
+}
+
+/* --- INDIVIDUAL BOX STYLING --- */
+.service-card {
+    flex: 1;               /* Forces all three boxes to have the exact same equal width */
+    background: #ffffff;   /* Pure white cards */
+    padding: 25px;         /* Breathing room inside the text box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Soft UI shadow from the photo */
+    font-family: Arial, sans-serif;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;    /* Gap between title and paragraph */
+}
+
+.service-card p {
+    font-size: 13px;
+    color: #555555;        /* Softened dark gray text color for paragraphs */
+    line-height: 1.4;
+}
+
+/* --- UNIQUE LEFT BORDER ACCENTS --- */
+.service-card.seo-accent {
+    border-left: 4px solid #00a8ff;   /* Bright Blue */
+}
+
+.service-card.emailing-accent {
+    border-left: 4px solid #00a8ff;   /* Light Green */
+}
+
+.service-card.branding-accent {
+    border-left: 4px solid #1e90ff;   /* Royal Blue Accent */
+}
+/* --- TWO-COLUMN WORKSPACE WRAPPER --- */
+.content-split-layout {
+    display: flex;
+    gap: 40px;             /* Space gap between articles zone and social sidebar */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.articles-section {
+    flex: 7;               /* Gives the main feed 70% width */
+}
+
+.sidebar-section {
+    flex: 3;               /* Gives the sidebar 30% width */
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* --- ARTICLES INNER SUB-GRID (Desert vs Text Rows) --- */
+.articles-inner-container {
+    display: flex;
+    gap: 20px;             /* Space between the big desert image and side list */
+}
+
+.featured-landscape-card {
+    flex: 1.2;             /* Big card takes up slightly more space */
+}
+
+.featured-landscape-card .image-box {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.featured-landscape-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-landscape-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-top: 12px;
+}
+
+/* --- SIDE MINI BLOCK STACKING --- */
+.mini-list-box {
+    flex: 0.8;             /* The list takes up slightly less space */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;             /* Vertical space between rows */
+}
+
+.mini-row-card {
+    display: flex;
+    background: #ffffff;   /* Pure white container strip */
+    height: 75px;          /* Matching the narrow look in your photo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+
+.mini-row-card img {
+    width: 95px;           /* Small photo snippet */
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini-card-text {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;   /* Perfectly centers the text line vertically */
+}
+
+.mini-card-text h4 {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+/* --- SOCIAL SIDEBAR BUTTONS --- */
+.social-block-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;              /* Thin white-space border line effect */
+}
+
+.social-row {
+    display: block;
+    padding: 14px 18px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.social-row.fb { background-color: #3b5998; }
+.social-row.tw { background-color: #26a2e1; }
+.social-row.yt { background-color: #ff0000; }
+/* --- THE MINIMIZED FOOTER BOX CONTAINER --- */
+.main-footer-box {
+    background-color: #000000;
+    color: #ffffff;
+    
+    /* THE FIX: Drastically dropped top/bottom padding from 40px/60px down to a snug 20px */
+    padding: 20px 0;    
+    
+    /* THE FIX: Reduced the gap above the footer from 50px to 30px so it sits closer to the content */
+    margin-top: 30px;          
+    
+    width: 100%;               
+    box-sizing: border-box;
+}
+
+/* --- THE INNER CONTENT BOUNDARY --- */
+.footer-inner-content {
+    max-width: 1200px;         
+    margin: 0 auto;            
+    padding: 0 40px;           
+    display: flex;
+    justify-content: space-between; 
+    
+    /* THE FIX: Aligns the left side and right side text perfectly along the exact same middle line */
+    align-items: center; 
+}
+
+/* --- LEFT SIDE BRAND TEXT --- */
+.footer-brand-side h3 {
+    font-size: 15px; /* Shrunk slightly */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-bottom: 2px; /* Reduced gap */
+}
+
+.footer-brand-side p {
+    font-size: 10px; /* Shrunk slightly */
+    opacity: 0.7;              
+    font-family: Arial, sans-serif;
+}
+
+/* --- RIGHT SIDE NAVIGATION MENU --- */
+.footer-links-side {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Puts the title and links on a neat single line if you want to save vertical space */
+}
+
+.footer-links-side h4 {
+    font-size: 14px; /* Shrunk slightly */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.footer-links-side ul {
+    list-style: none;          
+    display: flex; /* Forces the navigation links to sit side-by-side horizontally to save massive space */
+    gap: 15px;
+}
+
+.footer-links-side li {
+    margin-bottom: 0; /* Cleared bottom margins */
+}
+
+.footer-links-side a {
+    color: #ffffff;
+    text-decoration: none;   
+    font-size: 10px; /* Shrunk slightly */
+    opacity: 0.8;
+}
